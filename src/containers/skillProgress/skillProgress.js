@@ -5,7 +5,6 @@ import {Fade} from "react-reveal";
 import Build from "../../assets/lottie/build.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 
-
 export default function StackProgress() {
   if (techStack.viewSkillBars) {
     return (

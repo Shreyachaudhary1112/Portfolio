@@ -48,13 +48,11 @@ const skillsSection = {
   title: "Skills",
   subTitle: "Tools, languages and frameworks that power my development",
   skills: [
+    emoji("Programming: C++, Python, JavaScript, TypeScript, SQL, Solidity"),
     emoji(
-      "Programming: C++, Python, JavaScript, TypeScript, SQL, Solidity"
+      "Core Technical Skills: Data Structures, Algorithms, REST APIs, Cloud Computing, Object-Oriented Programming, System Design,  Debugging & Testing "
     ),
-    emoji("Core Technical Skills: Data Structures, Algorithms, REST APIs, Cloud Computing, Object-Oriented Programming, System Design,  Debugging & Testing "),
-    emoji(
-      "Frameworks: React.js, Node.js, Express.js, Flutter"
-    ),
+    emoji("Frameworks: React.js, Node.js, Express.js, Flutter"),
     emoji(
       "Platforms & Tools: Docker, Git, MySQL, Android Studio, AWS, Postman "
     ),
@@ -66,9 +64,7 @@ const skillsSection = {
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
-  softwareSkills: [
-    
-  ],
+  softwareSkills: [],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -81,15 +77,13 @@ const educationInfo = {
       schoolName: "University of Illinois Urbana-Champaign,",
       logo: require("./assets/images/uiuc.png"),
       subHeader: "Master of Science in Computer Science",
-      duration: "August 2023 - December 2024",
-      
-      
+      duration: "August 2023 - December 2024"
     },
     {
       schoolName: "Pune Institute Of Computer Technology",
       logo: require("./assets/images/pict.png"),
       subHeader: "Bachelor of Science in Computer Science",
-      duration: "August 2019 - May 2023",
+      duration: "August 2019 - May 2023"
     }
   ]
 };
@@ -169,12 +163,14 @@ const openSource = {
 
 const bigProjects = {
   title: "Projects",
-  subtitle: "Work that reflects my love for coding, creating and turning ideas into functional software.",
+  subtitle:
+    "Work that reflects my love for coding, creating and turning ideas into functional software.",
   projects: [
     {
       image: require("./assets/images/prismLogo.png"),
       projectName: "Prism | MERN Stack",
-      projectDesc: "A real time collaborative coding platform with multi user editing, fast rendering and event driven sync for smooth teamwork.",
+      projectDesc:
+        "A real time collaborative coding platform with multi user editing, fast rendering and event driven sync for smooth teamwork.",
       footerLink: [
         {
           name: "Visit Website",
@@ -186,7 +182,8 @@ const bigProjects = {
     {
       image: require("./assets/images/bhpLogo.png"),
       projectName: "Bangalore Housing Price Predictor | Flask",
-      projectDesc: "A full stack ML app that predicts property prices using a Flask REST backend, clean preprocessing and a simple interactive UI.",
+      projectDesc:
+        "A full stack ML app that predicts property prices using a Flask REST backend, clean preprocessing and a simple interactive UI.",
       footerLink: [
         {
           name: "Visit Website",
@@ -197,7 +194,8 @@ const bigProjects = {
     {
       image: require("./assets/images/BugLogo.png"),
       projectName: "Real-World Bug Analysis Suite | Testing & Automation",
-      projectDesc: "An automation toolkit that increases fault coverage and reduces debugging time using smart test generation.",
+      projectDesc:
+        "An automation toolkit that increases fault coverage and reduces debugging time using smart test generation.",
       footerLink: [
         {
           name: "Visit Website",
