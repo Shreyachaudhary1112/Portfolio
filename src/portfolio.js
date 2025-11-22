@@ -220,7 +220,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View",
-          url: "https://drive.google.com/file/d/1XMoylJQIVNDrmSUB4_lXUlxzRSr2QhZI/view?usp=drive_link"
+          url: "https://drive.google.com/file/d/1XMoylJQIVNDrmSUB4_lXUlxzRSr2QhZI/view?usp=sharing"
         }
       ]
     },
@@ -231,7 +231,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View",
-          url: "https://drive.google.com/file/d/1Vhlts_ONt0XG6_Wj-ZWMVsGgoJkH5Cu5/view?usp=drive_link"
+          url: "https://drive.google.com/file/d/1Vhlts_ONt0XG6_Wj-ZWMVsGgoJkH5Cu5/view?usp=sharing"
         }
       ]
     },
