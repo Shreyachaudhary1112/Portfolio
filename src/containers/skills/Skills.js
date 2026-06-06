@@ -45,7 +45,14 @@ export default function Skills() {
             {skillsSection.categories && (
               <div className="skills-categories-grid">
                 {skillsSection.categories.map((cat, i) => (
-                  <div key={i} className={isDark ? "skills-category-card dark" : "skills-category-card"}>
+                  <div
+                    key={i}
+                    className={
+                      isDark
+                        ? "skills-category-card dark"
+                        : "skills-category-card"
+                    }
+                  >
                     <h5 className="skills-category-title">{cat.title}</h5>
                     <div className="skills-category-tags">
                       {cat.skills.map((skill, index) => (

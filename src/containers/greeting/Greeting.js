@@ -21,7 +21,10 @@ export default function Greeting() {
               <div className="status-badge-container">
                 <div className={isDark ? "status-badge dark" : "status-badge"}>
                   <span className="pulse-dot"></span>
-                  <span className="status-text">MS CS Candidate @ UIUC &nbsp;|&nbsp; Open for Full-Time Roles</span>
+                  <span className="status-text">
+                    MS CS Candidate @ UIUC &nbsp;|&nbsp; Open for Full-Time
+                    Roles
+                  </span>
                 </div>
               </div>
               <h1
@@ -56,7 +59,7 @@ export default function Greeting() {
               </div>
             </div>
           </div>
-           <div className="greeting-image-div">
+          <div className="greeting-image-div">
             <TerminalWidget />
           </div>
         </div>

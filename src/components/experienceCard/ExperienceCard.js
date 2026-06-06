@@ -16,7 +16,8 @@ export default function ExperienceCard({cardInfo, isDark}) {
       return null;
     }
     // Calculate color brightness
-    const brightness = 0.299 * values[0] + 0.587 * values[1] + 0.114 * values[2];
+    const brightness =
+      0.299 * values[0] + 0.587 * values[1] + 0.114 * values[2];
     // If the color is too dark (e.g., black or dark navy), fall back to a soft light grey
     if (brightness < 80) {
       return "rgb(230, 235, 245)";

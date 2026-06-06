@@ -63,19 +63,52 @@ const skillsSection = {
   categories: [
     {
       title: "Languages",
-      skills: ["C++", "Python", "JavaScript", "TypeScript", "SQL", "Solidity", "Java", "HTML/CSS"]
+      skills: [
+        "C++",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "Solidity",
+        "Java",
+        "HTML/CSS"
+      ]
     },
     {
       title: "Frameworks & Libraries",
-      skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Flask", "Flutter"]
+      skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "FastAPI",
+        "Flask",
+        "Flutter"
+      ]
     },
     {
       title: "Cloud & Dev Tools",
-      skills: ["Docker", "Git", "MySQL", "AWS", "GCP", "Postman", "Hardhat", "Truffle"]
+      skills: [
+        "Docker",
+        "Git",
+        "MySQL",
+        "AWS",
+        "GCP",
+        "Postman",
+        "Hardhat",
+        "Truffle"
+      ]
     },
     {
       title: "Core Engineering",
-      skills: ["Data Structures", "Algorithms", "System Design", "Microservices", "REST APIs", "Software Testing", "CI/CD"]
+      skills: [
+        "Data Structures",
+        "Algorithms",
+        "System Design",
+        "Microservices",
+        "REST APIs",
+        "Software Testing",
+        "CI/CD"
+      ]
     }
   ],
   softwareSkills: [
@@ -254,7 +287,14 @@ const bigProjects = {
       projectName: "CodeIntel | Multi-Agent AI",
       projectDesc:
         "A multi-agent codebase intelligence platform that analyzes repositories to extract architecture patterns and power an interactive developer workspace with AI code chat.",
-      languages: ["FastAPI", "React.js", "Multi-Agent AI", "SQLite", "Python", "TailwindCSS"],
+      languages: [
+        "FastAPI",
+        "React.js",
+        "Multi-Agent AI",
+        "SQLite",
+        "Python",
+        "TailwindCSS"
+      ],
       footerLink: []
     },
     {
@@ -262,7 +302,14 @@ const bigProjects = {
       projectName: "Prism | MERN Stack",
       projectDesc:
         "A real time collaborative coding platform with multi user editing, fast rendering and event driven sync for smooth teamwork.",
-      languages: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "TailwindCSS"],
+      languages: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "TailwindCSS"
+      ],
       footerLink: [
         {
           name: "Visit Website",

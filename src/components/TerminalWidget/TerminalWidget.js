@@ -109,7 +109,8 @@ export default function TerminalWidget() {
             className="terminal-input"
             style={{
               fontSize: "18px",
-              fontFamily: '"Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace',
+              fontFamily:
+                '"Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace',
               transform: "none"
             }}
             autoFocus

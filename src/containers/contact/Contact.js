@@ -62,7 +62,9 @@ export default function Contact() {
                   title="Copy Email Address"
                 >
                   {copied ? (
-                    <span className="copied-text"><i className="fas fa-check"></i> Copied!</span>
+                    <span className="copied-text">
+                      <i className="fas fa-check"></i> Copied!
+                    </span>
                   ) : (
                     <i className="far fa-copy"></i>
                   )}
