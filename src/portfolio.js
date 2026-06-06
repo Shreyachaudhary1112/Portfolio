@@ -60,11 +60,78 @@ const skillsSection = {
       "Engineering Practices: Microservices, System Architecture, Version Control, Agile Delivery, Design Patterns"
     )
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
-  softwareSkills: [],
+  categories: [
+    {
+      title: "Languages",
+      skills: ["C++", "Python", "JavaScript", "TypeScript", "SQL", "Solidity", "Java", "HTML/CSS"]
+    },
+    {
+      title: "Frameworks & Libraries",
+      skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Flask", "Flutter"]
+    },
+    {
+      title: "Cloud & Dev Tools",
+      skills: ["Docker", "Git", "MySQL", "AWS", "GCP", "Postman", "Hardhat", "Truffle"]
+    },
+    {
+      title: "Core Engineering",
+      skills: ["Data Structures", "Algorithms", "System Design", "Microservices", "REST APIs", "Software Testing", "CI/CD"]
+    }
+  ],
+  softwareSkills: [
+    {
+      skillName: "C++",
+      fontAwesomeClassname: "devicon-cplusplus-plain colored"
+    },
+    {
+      skillName: "Python",
+      fontAwesomeClassname: "devicon-python-plain colored"
+    },
+    {
+      skillName: "JavaScript",
+      fontAwesomeClassname: "devicon-javascript-plain colored"
+    },
+    {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "devicon-typescript-plain colored"
+    },
+    {
+      skillName: "React.js",
+      fontAwesomeClassname: "devicon-react-original colored"
+    },
+    {
+      skillName: "Node.js",
+      fontAwesomeClassname: "devicon-nodejs-plain colored"
+    },
+    {
+      skillName: "Express.js",
+      fontAwesomeClassname: "devicon-express-original colored"
+    },
+    {
+      skillName: "Solidity",
+      fontAwesomeClassname: "devicon-solidity-plain colored"
+    },
+    {
+      skillName: "Flutter",
+      fontAwesomeClassname: "devicon-flutter-plain colored"
+    },
+    {
+      skillName: "MySQL",
+      fontAwesomeClassname: "devicon-mysql-plain colored"
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "devicon-amazonwebservices-original colored"
+    },
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "devicon-docker-plain colored"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "devicon-git-plain colored"
+    }
+  ],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -74,7 +141,7 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "University of Illinois Urbana-Champaign,",
+      schoolName: "University of Illinois Urbana-Champaign",
       logo: require("./assets/images/uiuc.png"),
       subHeader: "Master of Science in Computer Science",
       duration: "August 2023 - December 2024"
@@ -94,16 +161,20 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Fullstack MERN", //Insert stack or technology you have experience in
-      progressPercentage: "80%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Programming",
+      Stack: "Software Engineering & Algorithms",
       progressPercentage: "90%"
     },
     {
+      Stack: "Full Stack Development (MERN, FastAPI)",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Agentic AI & Web3",
+      progressPercentage: "75%"
+    },
+    {
       Stack: "Data Analysis",
-      progressPercentage: "60%"
+      progressPercentage: "65%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -114,6 +185,18 @@ const techStack = {
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
+    {
+      role: "AI Intern",
+      company: "Altisec Technologies",
+      companylogo: require("./assets/images/altisec.png"),
+      date: "Mar 2026 – Current",
+      desc: "",
+      descBullets: [
+        "Architected Viz360, an AI-enabled SOC platform on GCP, centralizing incident monitoring, investigation, ticketing, and security operations through workflow automation and role-based dashboards.",
+        "Customized Cortex XSIAM agents by defining prompts, behavioral instructions, contextual inputs, and structured output schemas to automate security investigation and response workflows.",
+        "Designed and implemented agentic AI workflows using blackboard architecture to automate incident response across distributed systems, improving operational efficiency by 30%."
+      ]
+    },
     {
       role: "Full Stack Developer",
       company: "Saayam For All",
@@ -167,10 +250,19 @@ const bigProjects = {
     "Work that reflects my love for coding, creating and turning ideas into functional software.",
   projects: [
     {
+      image: require("./assets/images/codeintel.png"),
+      projectName: "CodeIntel | Multi-Agent AI",
+      projectDesc:
+        "A multi-agent codebase intelligence platform that analyzes repositories to extract architecture patterns and power an interactive developer workspace with AI code chat.",
+      languages: ["FastAPI", "React.js", "Multi-Agent AI", "SQLite", "Python", "TailwindCSS"],
+      footerLink: []
+    },
+    {
       image: require("./assets/images/prismLogo.png"),
       projectName: "Prism | MERN Stack",
       projectDesc:
         "A real time collaborative coding platform with multi user editing, fast rendering and event driven sync for smooth teamwork.",
+      languages: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "TailwindCSS"],
       footerLink: [
         {
           name: "Visit Website",
@@ -184,6 +276,7 @@ const bigProjects = {
       projectName: "Bangalore Housing Price Predictor | Flask",
       projectDesc:
         "A full stack ML app that predicts property prices using a Flask REST backend, clean preprocessing and a simple interactive UI.",
+      languages: ["Python", "Flask", "Machine Learning", "HTML/CSS", "Pandas"],
       footerLink: [
         {
           name: "Visit Website",
@@ -196,6 +289,7 @@ const bigProjects = {
       projectName: "Real-World Bug Analysis Suite | Testing & Automation",
       projectDesc:
         "An automation toolkit that increases fault coverage and reduces debugging time using smart test generation.",
+      languages: ["Java", "JUnit", "Automation", "Software Testing", "CI/CD"],
       footerLink: [
         {
           name: "Visit Website",
@@ -320,7 +414,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+1 217-954-3340",
+  number: "9527915300",
   email_address: "shreyuchaudhary@gmail.com"
 };
 

@@ -3,21 +3,35 @@
 .experience-card {
   position: relative;
   background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  box-shadow: 0 10px 30px -15px rgba(99, 102, 241, 0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .experience-card-dark {
   position: relative;
-  background-color: $darkBackground;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  background-color: rgba(15, 23, 42, 0.45);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.18);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.experience-card-dark:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.35);
+  border-color: rgba(129, 140, 248, 0.45);
 }
 
 .experience-banner {
@@ -88,8 +102,9 @@
   margin-right: auto;
   width: 8rem;
   height: 8rem;
+  padding: 8px;
   box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
-  border-radius: 50%;
+  border-radius: 12px;
 }
 
 .experience-text-role {
@@ -120,6 +135,25 @@
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
+
+  ul {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    text-align: left;
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 16px;
+      line-height: 1.6;
+      color: $textColor;
+      font-weight: 500;
+
+      &.dark-mode-text {
+        color: #e2e8f0 !important;
+      }
+    }
+  }
 }
 
 /* Media Query */

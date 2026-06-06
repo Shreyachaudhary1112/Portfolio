@@ -73,7 +73,13 @@ function Header() {
           )}
           {viewResume && (
             <li>
-              <a href="#resume">Resume</a>
+              <a
+                href={greeting.resumeLink || require("../../containers/greeting/resume.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
           )}
           <li>

@@ -84,4 +84,67 @@
   .contact-image-div {
     display: none;
   }
+
+  .email-copy-wrapper {
+    gap: 8px;
+  }
+}
+
+// Copy to clipboard styling
+.email-copy-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+
+  .contact-detail-email {
+    margin-top: 0 !important;
+  }
+}
+
+.email-copy-btn {
+  background: transparent;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #4f46e5;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.45);
+    transform: translateY(-1px);
+  }
+
+  &.dark {
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    color: #a5b4fc;
+
+    &:hover {
+      background: rgba(129, 140, 248, 0.12);
+      border-color: rgba(129, 140, 248, 0.55);
+    }
+  }
+
+  .copied-text {
+    color: #10b981;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .email-copy-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
 }

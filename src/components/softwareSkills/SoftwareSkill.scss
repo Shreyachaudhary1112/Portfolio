@@ -3,29 +3,83 @@
 .dev-icons {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 20px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  margin: 4px;
+  border-radius: 999px; // Fully rounded capsule pill shape
+  background-color: rgba(241, 245, 249, 0.85); // Opaque light grey
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default; // Not clickable
+  gap: 8px; // Space between icon and text
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: rgba(241, 245, 249, 0.98);
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.1);
+  }
+}
+
+.dark-mode .software-skill-inline {
+  background-color: rgba(15, 23, 42, 0.65); // Opaque dark slate
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  &:hover {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-color: rgba(129, 140, 248, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .software-skill-inline > i {
-  color: $subTitle;
+  font-size: 20px; // Compact icon size
+  margin-bottom: 0px;
+  transition: all 0.2s ease;
+
+  &:not(.colored) {
+    color: #64748b; // Slate-500
+  }
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
+.dark-mode .software-skill-inline > i {
+  &:not(.colored) {
+    color: #94a3b8; // Slate-400
+  }
 }
+
+.software-skill-inline:hover > i {
+  &:not(.colored) {
+    color: #6366f1;
+  }
+}
+
 .software-skill-inline > p {
-  color: $subTitle;
-  font-size: 10px;
+  color: #475569; // Slate-600
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+
+.dark-mode .software-skill-inline > p {
+  color: #cbd5e1 !important; // Slate-300
+}
+
+.software-skill-inline:hover > p {
+  color: #6366f1 !important;
 }

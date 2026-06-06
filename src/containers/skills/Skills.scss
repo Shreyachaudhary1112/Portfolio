@@ -62,3 +62,76 @@
     order: 2;
   }
 }
+
+// Categorized Skills Grid styling
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.skills-category-card {
+  background-color: $lightBackground2;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 15px -3px rgba(99, 102, 241, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 22px -5px rgba(99, 102, 241, 0.12);
+  }
+
+  &.dark {
+    background-color: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      border-color: rgba(129, 140, 248, 0.3);
+      box-shadow: 0 10px 22px -5px rgba(99, 102, 241, 0.35);
+    }
+  }
+}
+
+.skills-category-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  color: $titleColor;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  .dark & {
+    color: $textColorDark;
+  }
+}
+
+.skills-category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: rgba(99, 102, 241, 0.06);
+  color: #4f46e5;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  white-space: nowrap;
+
+  .dark & {
+    background-color: rgba(129, 140, 248, 0.08);
+    color: #c7d2fe;
+    border: 1px solid rgba(129, 140, 248, 0.2);
+  }
+}

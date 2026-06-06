@@ -125,3 +125,99 @@
     width: auto;
   }
 }
+
+// Recruiter Status Badge styles
+.status-badge-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+
+  .status-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4f46e5;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &.dark {
+    background-color: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      border-color: rgba(129, 140, 248, 0.5);
+      box-shadow: 0 6px 16px rgba(129, 140, 248, 0.15);
+    }
+
+    .status-text {
+      color: #a5b4fc; // Indigo-300
+    }
+  }
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-badge-container {
+    justify-content: center;
+  }
+  .status-badge {
+    padding: 6px 12px;
+    .status-text {
+      font-size: 12px;
+    }
+  }
+}

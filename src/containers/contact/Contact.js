@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
@@ -9,6 +9,14 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contactInfo.email_address);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
@@ -41,12 +49,25 @@ export default function Contact() {
                   <br />
                 </>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
+              <div className="email-copy-wrapper">
+                <a
+                  className="contact-detail-email"
+                  href={"mailto:" + contactInfo.email_address}
+                >
+                  {contactInfo.email_address}
+                </a>
+                <button
+                  className={isDark ? "email-copy-btn dark" : "email-copy-btn"}
+                  onClick={handleCopy}
+                  title="Copy Email Address"
+                >
+                  {copied ? (
+                    <span className="copied-text"><i className="fas fa-check"></i> Copied!</span>
+                  ) : (
+                    <i className="far fa-copy"></i>
+                  )}
+                </button>
+              </div>
               <br />
               <br />
               <SocialMedia />

@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
@@ -43,23 +42,22 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
-            </div>
+            {skillsSection.categories && (
+              <div className="skills-categories-grid">
+                {skillsSection.categories.map((cat, i) => (
+                  <div key={i} className={isDark ? "skills-category-card dark" : "skills-category-card"}>
+                    <h5 className="skills-category-title">{cat.title}</h5>
+                    <div className="skills-category-tags">
+                      {cat.skills.map((skill, index) => (
+                        <span key={index} className="skill-tag">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </Fade>
       </div>

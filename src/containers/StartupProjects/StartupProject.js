@@ -65,6 +65,15 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
+                    {project.languages && (
+                      <div className="project-languages">
+                        {project.languages.map((lang, index) => (
+                          <span key={index} className="language-tag">
+                            {lang}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
