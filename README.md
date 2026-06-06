@@ -6,7 +6,7 @@ The design uses smooth animations, and a clean layout focused on readability.
 
 ---
 ### 🔗 Live Link
-[(https://shreyachaudhary1112.github.io/Portfolio/)]
+https://shreyachaudhary1112.github.io/Portfolio/
 
 
 ## ✨ Features
